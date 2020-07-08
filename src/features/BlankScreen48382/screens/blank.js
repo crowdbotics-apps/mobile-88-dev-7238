@@ -110,9 +110,8 @@ export class _Blank extends React.Component {
           backgroundColor: "#ffffff",
           fontStyle: "normal",
           fontWeight: "normal",
-          borderColor: "#f50000",
+          borderColor: "#0062ff",
           borderStyle: "solid",
-          borderWidth: 5,
           borderRadius: 0
         }}
         value={this.state.Input_6}
