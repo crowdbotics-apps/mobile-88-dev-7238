@@ -9,68 +9,78 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0004_remove_customtext_tests'),
+        ("home", "0004_remove_customtext_tests"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='customtext',
-            name='binary',
+            model_name="customtext",
+            name="binary",
             field=models.BinaryField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='bolean',
+            model_name="customtext",
+            name="bolean",
             field=models.BooleanField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='char',
+            model_name="customtext",
+            name="char",
             field=models.CharField(blank=True, max_length=256, null=True),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='date',
+            model_name="customtext",
+            name="date",
             field=models.DateField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='datetime',
+            model_name="customtext",
+            name="datetime",
             field=models.DateTimeField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='decimal',
-            field=models.DecimalField(blank=True, decimal_places=10, max_digits=30, null=True),
+            model_name="customtext",
+            name="decimal",
+            field=models.DecimalField(
+                blank=True, decimal_places=10, max_digits=30, null=True
+            ),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='duration',
+            model_name="homepage",
+            name="duration",
             field=models.DurationField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='email',
+            model_name="homepage",
+            name="email",
             field=models.EmailField(blank=True, max_length=254, null=True),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='float',
+            model_name="homepage",
+            name="float",
             field=models.FloatField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='foreign',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='homepage_foreign', to=settings.AUTH_USER_MODEL),
+            model_name="homepage",
+            name="foreign",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="homepage_foreign",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='integer',
+            model_name="homepage",
+            name="integer",
             field=models.IntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='test',
-            field=models.ManyToManyField(blank=True, related_name='homepage_test', to='home.CustomText'),
+            model_name="homepage",
+            name="test",
+            field=models.ManyToManyField(
+                blank=True, related_name="homepage_test", to="home.CustomText"
+            ),
         ),
     ]
